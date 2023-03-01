@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+body {
+    font-family: 'Montserrat';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: hsl(30, 38%, 92%);
+}
+
+p {
+    font-size: 14px;
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 660px;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    gap: 0;
+}
+
+.product-image {
+    
+    width: 100%;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    display: block;
+}
+
+.product-image-mobile{
+    display: none;
+}
+
+.right {
+    padding: 1rem 2rem;
+}
+
+.product-category {
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    color: hsl(228, 12%, 48%);
+}
+
+.product-name {
+    font-family: 'Fraunces';
+    font-weight: 700;
+}
+
+.product-description{
+    line-height: 1.5;
+    color: hsl(228, 12%, 48%);
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem
+}
+
+.price-now {
+    font-family: 'Fraunces';
+    color: hsl(158, 36%, 37%);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.old-price{
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+}
+
+button {
+    width: 100%;
+    background-color: hsl(158, 36%, 37%);
+    border: 0;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    color: white;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: hsl(212, 21%, 14%);
+    cursor: pointer;
+}
+
+@media screen and (max-width:650px) {
+    .wrapper {
+        grid-template-rows: .5fr .5fr;
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+        display: none;
+    }
+
+    .product-image-mobile{
+        width: 100%;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        display: block;
+    }
+
+}
